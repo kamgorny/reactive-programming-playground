@@ -1,18 +1,18 @@
-package section01.publisher;
+package demobasicimpl.publisher;
 
 import com.github.javafaker.Faker;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import section01.subscriber.DemoSubscriber;
+import demobasicimpl.subscriber.DemoSubscriber;
 
 public class DemoSubscription implements Subscription
 {
     private static final Logger logger = LoggerFactory.getLogger(DemoSubscriber.class);
     private static final int MAX_ITEMS = 10;
     private final Faker dataFaker;
-    private Subscriber<? super String> subscriber;
+    private final Subscriber<? super String> subscriber;
     private boolean cancelled;
     private int dataCount = 0;
 

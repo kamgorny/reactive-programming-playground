@@ -3,8 +3,8 @@ package section01;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.reactivestreams.Subscription;
-import section01.publisher.DemoPublisher;
-import section01.subscriber.DemoSubscriber;
+import demobasicimpl.publisher.DemoPublisher;
+import demobasicimpl.subscriber.DemoSubscriber;
 
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 

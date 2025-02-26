@@ -1,4 +1,4 @@
-package section01.publisher;
+package demobasicimpl.publisher;
 
 import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;

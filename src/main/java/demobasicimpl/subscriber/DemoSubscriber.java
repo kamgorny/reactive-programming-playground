@@ -1,4 +1,4 @@
-package section01.subscriber;
+package demobasicimpl.subscriber;
 
 import lombok.Getter;
 import org.reactivestreams.Subscriber;
