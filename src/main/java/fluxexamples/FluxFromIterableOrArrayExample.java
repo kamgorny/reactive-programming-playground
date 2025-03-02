@@ -6,7 +6,7 @@ import reactor.core.publisher.Flux;
 import java.util.List;
 
 
-public class FluxFromIterableOrArray
+public class FluxFromIterableOrArrayExample
 {
     public static void main(String[] args)
     {

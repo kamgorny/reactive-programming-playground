@@ -1,4 +1,4 @@
-package monoservice;
+package monoexamples.assignment.monoservice;
 
 import reactor.core.publisher.Mono;
 

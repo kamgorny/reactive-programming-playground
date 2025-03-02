@@ -3,7 +3,7 @@ package fluxexamples;
 import common.Util;
 import reactor.core.publisher.Flux;
 
-public class FluxMultipleSubscribers
+public class FluxMultipleSubscribersExample
 {
     public static void main(String[] args)
     {

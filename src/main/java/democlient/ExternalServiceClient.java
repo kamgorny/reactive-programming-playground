@@ -1,6 +1,7 @@
 package democlient;
 
 import common.DemoHttpClient;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 public class ExternalServiceClient extends DemoHttpClient
@@ -13,5 +14,21 @@ public class ExternalServiceClient extends DemoHttpClient
                 .responseContent()
                 .asString()
                 .next();
+    }
+
+    public Flux<String> getProductNamesStream()
+    {
+        return this.httpClient.get()
+                .uri("/demo02/name/stream")
+                .responseContent()
+                .asString();
+    }
+
+    public Flux<Integer> getStockPrice()
+    {
+        return this.httpClient.get()
+                .uri("/demo02/stock/stream")
+                .responseContent()
+                .asString().map(Integer::parseInt);
     }
 }

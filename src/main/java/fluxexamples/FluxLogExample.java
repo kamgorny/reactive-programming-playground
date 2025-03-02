@@ -3,15 +3,13 @@ package fluxexamples;
 import common.Util;
 import reactor.core.publisher.Flux;
 
-import static common.Util.faker;
 
-
-public class FluxRange
+public class FluxLogExample
 {
     public static void main(String[] args)
     {
-        Flux.range(1,10)
-                .map(i -> faker().name().firstName())
+        Flux.range(1,5)
+                .log()
                 .subscribe(Util.subscriber());
     }
 
