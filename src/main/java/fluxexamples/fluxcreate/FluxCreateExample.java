@@ -1,19 +1,20 @@
 package fluxexamples.fluxcreate;
 
 import common.Util;
+import fluxexamples.fluxcreate.generator.FluxCreateNameGenerator;
 import reactor.core.publisher.Flux;
 
 public class FluxCreateExample
 {
-    public static void main(String[] args) {
-        Flux.create(fluxSink ->
+    public static void main(String[] args)
+    {
+        var generator = new FluxCreateNameGenerator();
+        var flux = Flux.create(generator);
+        flux.subscribe(Util.subscriber());
+
+        for (int i = 0; i < 10; i++)
         {
-           String country;
-           do {
-               country = Util.faker().country().name();
-               fluxSink.next(country);
-           } while (!country.equalsIgnoreCase("canada"));
-           fluxSink.complete();
-        }).subscribe(Util.subscriber());
+         generator.generate();
+        }
     }
 }
